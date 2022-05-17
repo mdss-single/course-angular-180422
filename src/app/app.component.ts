@@ -1,8 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ViewChild
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
@@ -10,16 +6,15 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 	selector: 'app-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
 	title = 'course-angular-180422';
 
-  @ViewChild(SidenavComponent, { static: true })
+	@ViewChild(SidenavComponent, { static: true })
+	private sidenavComponent!: SidenavComponent;
 
-  private sidenavComponent!: SidenavComponent;
-
-  onMenuClick() {
-    this.sidenavComponent.toggleSidenav();
-  }
+	onMenuClick() {
+		this.sidenavComponent.toggleSidenav();
+	}
 }
