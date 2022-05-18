@@ -23,8 +23,8 @@ import { ProductsListModule } from './pages/products-list/products-list.module';
 		MatIconModule,
 		MatButtonModule,
 		SidenavModule,
-    MatInputModule,
-    ProductsListModule
+		MatInputModule,
+		ProductsListModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
