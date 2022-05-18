@@ -1,0 +1,23 @@
+<mat-card class="product-card">
+    <div class="product-card__image">
+        <img mat-card-image [src]="product.images[0].url" [alt]="product.name" loading="lazy">
+    </div>
+
+    <mat-card-title>{{ product.name }}</mat-card-title>
+
+    <mat-card-content>
+        <div class="rating">
+            <ng-container *ngFor="let _ of [].constructor(product.roundedRating)">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="product-card__star product-card__star--full">star</mat-icon>
+            </ng-container>
+
+            <ng-container *ngFor="let _ of [].constructor(5 - product.roundedRating)">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="product-card__star">star</mat-icon>
+            </ng-container>
+        </div>
+
+        <div class="price">
+            <strong>&euro;{{ product.price }}</strong>
+        </div>
+    </mat-card-content>
+</mat-card>

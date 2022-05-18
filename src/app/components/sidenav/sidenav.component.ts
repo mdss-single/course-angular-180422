@@ -17,7 +17,6 @@ export class SidenavComponent implements OnInit {
 	toggleSidenav() {
 		this.matDrawer.toggle();
 		this.changeDetectorRef.markForCheck();
-		console.log('fuck');
 	}
 
 	ngOnInit(): void {}

@@ -8,10 +8,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { SidenavModule } from './components/sidenav/sidenav.module';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { ProductsListModule } from './pages/products-list/products-list.module';
 
 @NgModule({
-	declarations: [AppComponent, HeaderComponent],
+	declarations: [AppComponent, HeaderComponent, SearchBarComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -20,6 +23,8 @@ import { SidenavModule } from './components/sidenav/sidenav.module';
 		MatIconModule,
 		MatButtonModule,
 		SidenavModule,
+    MatInputModule,
+    ProductsListModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],
